@@ -1,0 +1,54 @@
+1) Test whether two vectors are exactly equal (element by element).
+vec1 = c(rownames(mtcars[1:15,]))
+vec2 = c(rownames(mtcars[11:25,]))
+Answer:> vec1 = c(rownames(mtcars[1:15,]))
+> vec2 = c(rownames(mtcars[11:25,]))
+> vec1== vec2
+ [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+[13] FALSE FALSE FALSE
+2. Sort the character vector in ascending order and descending order.
+vec1 = c(rownames(mtcars[1:15,]))
+vec2 = c(rownames(mtcars[11:25,]))
+Answer:
+> vec1 = c(rownames(mtcars[1:15,]))
+> vec2 = c(rownames(mtcars[11:25,]))
+> #Ascending order
+> sort(vec1,decreasing = FALSE)
+ [1] "Cadillac Fleetwood" "Datsun 710"         "Duster 360"        
+ [4] "Hornet 4 Drive"     "Hornet Sportabout"  "Mazda RX4"         
+ [7] "Mazda RX4 Wag"      "Merc 230"           "Merc 240D"         
+[10] "Merc 280"           "Merc 280C"          "Merc 450SE"        
+[13] "Merc 450SL"         "Merc 450SLC"        "Valiant"           
+> sort(vec2,decreasing = FALSE)
+ [1] "AMC Javelin"         "Cadillac Fleetwood"  "Camaro Z28"         
+ [4] "Chrysler Imperial"   "Dodge Challenger"    "Fiat 128"           
+ [7] "Honda Civic"         "Lincoln Continental" "Merc 280C"          
+[10] "Merc 450SE"          "Merc 450SL"          "Merc 450SLC"        
+[13] "Pontiac Firebird"    "Toyota Corolla"      "Toyota Corona"      
+> 
+> vec1 = c(rownames(mtcars[1:15,]))
+> vec2 = c(rownames(mtcars[11:25,]))
+> #Descending order
+> sort(vec1,decreasing = TRUE)
+ [1] "Valiant"            "Merc 450SLC"        "Merc 450SL"        
+ [4] "Merc 450SE"         "Merc 280C"          "Merc 280"          
+ [7] "Merc 240D"          "Merc 230"           "Mazda RX4 Wag"     
+[10] "Mazda RX4"          "Hornet Sportabout"  "Hornet 4 Drive"    
+[13] "Duster 360"         "Datsun 710"         "Cadillac Fleetwood"
+> sort(vec2,decreasing = TRUE)
+ [1] "Toyota Corona"       "Toyota Corolla"      "Pontiac Firebird"   
+ [4] "Merc 450SLC"         "Merc 450SL"          "Merc 450SE"         
+ [7] "Merc 280C"           "Lincoln Continental" "Honda Civic"        
+[10] "Fiat 128"            "Dodge Challenger"    "Chrysler Imperial"  
+[13] "Camaro Z28"          "Cadillac Fleetwood"  "AMC Javelin"  
+3. What is the major difference between str() and paste() show an example.
+str() - Compactly Display the Structure of an Arbitrary R Object
+> str(1:12)
+ int [1:12] 1 2 3 4 5 6 7 8 9 10 ...
+paste() is like concatenation using separation factor
+> paste("a","b")  #Here default separation factor is " " i.e. a space
+[1] "a b" 
+4. Introduce a separator when concatenating the strings.
+Answer:
+> paste("Apple","Oranges",sep=",")
+[1] "Apple,Oranges"
